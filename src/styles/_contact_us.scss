@@ -145,6 +145,7 @@
     line-height: 1.4;
     letter-spacing: 0.15px;
     font-weight: 400;
+    transition: color 0.2s ease;
 
     &:hover {
       /* Ховер-ефект для інтерактивності */
@@ -152,13 +153,13 @@
     }
   }
 
-  &__address {
-    /* Семантичний тег <address> для контактних даних */
-    color: variables.$color-text-footer-dark;
-    outline: none;
-    font-size: 16px;
-    line-height: 1.4;
-    letter-spacing: 0.15px;
-    font-weight: 400;
+  &__link--address {
+    text-decoration: none;
+    color: inherit;
+    display: block; // Щоб <br> працювали коректно
+
+    &:hover {
+      color: variables.$color-accent;
+    }
   }
 }

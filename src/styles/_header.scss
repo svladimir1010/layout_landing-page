@@ -28,21 +28,31 @@
     z-index: 10;
     display: flex;
     align-items: center;
-    gap: 8px;
+    gap: 0;
     text-decoration: none;
     color: inherit;
     transition: opacity 0.2s ease;
 
     &-text {
-      display: none;
+      max-width: 0;
+      overflow: hidden;
+      opacity: 0;
+      white-space: nowrap;
       font-weight: 700;
-      font-style: bold;
-      line-height: 16px;
       font-size: 12px;
+      line-height: 16px;
       letter-spacing: 2px;
+      transition: all 0.2s ease;
+    }
 
-      @media (min-width: 1260px) {
-        display: block;
+    @media (min-width: 1260px) {
+      &:hover {
+        gap: 8px;
+      }
+
+      &:hover &-text {
+        max-width: 150px;
+        opacity: 1;
       }
     }
   }
