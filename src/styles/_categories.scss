@@ -4,6 +4,7 @@
   background-color: variables.$bg-main;
 
   &__title {
+    /* ... стилі заголовка ... */
     font-weight: 700;
     font-size: 32px;
     line-height: 32px;
@@ -25,12 +26,14 @@
 
   &__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(2, 1fr); /* Мобайл/планшет: дві колонки */
     gap: 40px 20px;
 
     @media (min-width: 744px) {
       gap: 56px 24px;
     }
+
+    /* На десктопі залишаємо 2 колонки, як у макеті */
   }
 
   &__card {
@@ -41,7 +44,7 @@
 
   &__image {
     width: 100%;
-    aspect-ratio: 1;
+    aspect-ratio: 1; /* Квадратні картки */
     background-color: variables.$bg-light;
     overflow: hidden;
   }
@@ -58,6 +61,7 @@
   }
 
   &__name {
+    /* ... стилі ... */
     font-weight: 700;
     font-size: 18px;
     line-height: 1.4;
@@ -66,7 +70,7 @@
   }
 
   &__btn {
-    width: 100%;
+    width: 100%; /* Мобайл: кнопка на всю ширину */
     margin-top: 40px;
     padding: 16px 32px;
     background-color: variables.$color-accent;
@@ -81,7 +85,7 @@
     transition: background-color 0.2s ease;
 
     &:hover {
-      background-color: variables.$color-dark;
+      background-color: variables.$color-dark; /* Стан Hover з макету */
       opacity: 0.9;
     }
 
@@ -98,7 +102,7 @@
     }
 
     @media (min-width: 1260px) {
-      width: 324px;
+      width: 324px; /* Десктоп: фіксована ширина кнопки */
       height: 56px;
     }
   }

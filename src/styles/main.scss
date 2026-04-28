@@ -11,10 +11,21 @@
 @use './contact_us';
 @import 'https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap';
 
+/* Плавна прокрутка до секцій при кліку на навігацію */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Відступ зверху, щоб фіксований хедер не перекривав початок секції */
+section {
+  scroll-margin-top: 60px;
+}
+
 body.no-scroll {
   overflow: hidden;
 }
 
+/* Grid-контейнер для секцій з адаптивними відступами */
 .main {
   display: grid;
   grid-template-columns: 1fr;

@@ -4,6 +4,7 @@
   background-color: variables.$bg-main;
 
   &__title {
+    /* ... стилі заголовка ... */
     font-weight: 700;
     font-size: 32px;
     line-height: 32px;
@@ -25,7 +26,7 @@
 
   &__list {
     display: grid;
-    grid-template-columns: 1fr; // Mobile: 1 колонка
+    grid-template-columns: 1fr; /* Мобайл: одна колонка */
     gap: 40px;
 
     @media (min-width: 744px) {
@@ -33,7 +34,7 @@
     }
 
     @media (min-width: 1260px) {
-      grid-template-columns: repeat(3, 1fr); // Desktop: 3 колонки
+      grid-template-columns: repeat(3, 1fr); /* Десктоп: три колонки */
       gap: 24px;
     }
   }
@@ -42,33 +43,33 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
-    height: 100%;
+    height: 100%; /* Картка розтягується на всю висоту комірки грида */
   }
 
   &__image-wrapper {
     width: 100%;
-    aspect-ratio: 1; // Квадратное изображение
+    aspect-ratio: 1; /* Квадратне зображення */
     background-color: variables.$bg-light;
     overflow: hidden;
-    border-radius: 4px; // Если нужно скругление
+    border-radius: 4px;
   }
 
   &__img {
     width: 100%;
     height: 100%;
-    object-fit: cover; // Или contain, смотри по дизайну
+    object-fit: cover;
     object-position: center;
     transition: transform 0.3s ease;
 
     &:hover {
-      transform: scale(1.05); // Легкий зум при наведении
+      transform: scale(1.05); /* Легкий зум при наведенні */
     }
   }
 
   &__content {
     display: flex;
     flex-direction: column;
-    flex-grow: 1;
+    flex-grow: 1; /* Контент займає доступний простір */
     gap: 12px;
   }
 
@@ -99,6 +100,8 @@
     line-height: 1.2;
     color: variables.$color-text-main;
     margin: 0;
+
+    /* Магічний трюк: прижимає ціну до низу картки */
     margin-top: auto;
   }
 }
